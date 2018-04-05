@@ -5,8 +5,8 @@
 
 $lightest: #FFFFFF;
 $darkest: #000000;
-$accent: #004080;
-$blackish: #231f20;
+$accent: #48f7f1;
+$gray: #868686;
 $hover: #cc0000;
 
 // ---------------------------------------------------
@@ -22,8 +22,11 @@ $med-shadow: 1px 1px 1px rgba(0,0,0,0.35);
 //    Typography
 // ---------------------------------------------------
 
+@import url('https://fonts.googleapis.com/css?family=Poppins|Prompt:300,400,500,900');
+
 $font-color: #34435e;
-$robo: 'Roboto', Helvetica, Arial, sans-serif;
+$pop: 'Poppins', sans-serif;
+$prom: 'Prompt', sans-serif;
 $fa: 'FontAwesome', sans-serif;
 
 
