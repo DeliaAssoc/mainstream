@@ -4,9 +4,10 @@
 
 
 $lightest: #FFFFFF;
-$darkest: #000000;
-$accent: #48f7f1;
-$gray: #868686;
+$darkest: #1a1a1a;
+$accent: rgba(0, 178, 233, 1);
+$ltgray: #dde1e3;
+$dkgray: #868686;
 $hover: #cc0000;
 
 // ---------------------------------------------------
@@ -36,4 +37,4 @@ $fa: 'FontAwesome', sans-serif;
 
 
 $transition-fast: all 0.15s ease;
-$transition-medium : all 0.25s ease;
+$transition-medium: all 0.25s ease;

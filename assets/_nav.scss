@@ -4,16 +4,17 @@
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-
+a,
 a:visited {
-	color: purple;
+	color: $darkest;
+	text-decoration: none;
+	transition: $transition-medium;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: $dkgray;
+	text-decoration: none;
+	transition: $transition-medium;
 }
 
 a:focus {

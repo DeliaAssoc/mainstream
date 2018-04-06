@@ -5,6 +5,56 @@
 ## Posts and pages
 --------------------------------------------------------------*/
 
+// HOMEPAGE
+.slide {
+
+	&.flexxed {
+		display: flex !important;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		    -ms-flex-direction: column-reverse;
+		        flex-direction: column-reverse;
+	}
+}
+
+.slide-text {
+	background-color: $accent;
+	font-family: $prom;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.slide-text-inner {
+	padding: 20px;
+}
+
+.slide-link {
+	font-weight: 400;
+	padding: 0 0 0 20px;
+	position: relative;
+	text-decoration: none;
+
+	&:before {
+		content: '\f138';
+		display: block;
+		font-family: $fa;
+		height: 20px;
+		position: absolute;
+		width: 20px;
+	}
+}
+
+.slide-image {
+	height: auto;
+	overflow: hidden;
+	width: 100%;
+
+	img {
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+}
 
 
 /*--------------------------------------------------------------

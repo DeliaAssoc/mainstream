@@ -1,0 +1,14 @@
+.site-footer {
+    color: $lightest;
+    background-color: $darkest;
+    text-align: center;
+
+    a {
+        color: $accent;
+    }
+
+    .address,
+    .contact {
+        margin: 0 0 10px 0;
+    }
+}

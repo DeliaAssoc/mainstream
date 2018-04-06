@@ -1,0 +1,59 @@
+// HEADER
+
+.aux-header,
+.mid-header,
+.bottom-header {
+    padding: 5px 0;
+}
+
+.aux-header {
+    background-color: $ltgray;
+    display: none;
+}
+
+.mid-header {
+
+    .flexxed {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .search {
+        font-size: 20px;
+    }
+}
+
+.site-branding {
+    width: 50%;
+}
+
+.site-title {
+    width: 125px;
+
+    img {
+        display: block;
+    }
+}
+
+.motto-search {
+    text-align: right;
+    width: 50%;
+}
+
+.site-description {
+    display: none;
+    font-family: $prom;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.bottom-header {
+    background-color: $darkest;
+    overflow: hidden;
+}

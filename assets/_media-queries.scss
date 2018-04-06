@@ -1,0 +1,119 @@
+@media only screen and ( min-width: 480px ) {
+
+    // CLASSES
+    .p60 {
+        padding: 40px 0;
+    }
+
+    .slide-text-inner {
+        padding: 20px 40px;
+    }
+}
+
+@media only screen and ( min-width: 568px ) {
+
+    // HEADER
+    .site-title {
+        width: 155px;
+    }
+
+    .motto-search {
+        padding: 5px 0 0 0;
+    }
+}
+
+
+@media only screen and ( min-width: 768px ) {
+
+    // HEADER
+    .aux-header {
+        display: block;
+    }
+
+    .mid-header {
+        padding: 20px 0;
+    }
+
+    .site-title {
+        width: 200px;
+    }
+
+    .motto-search {
+        padding: 10px 0 0 0;
+    }
+
+    // HOMEPAGE
+    .slide {
+        height: 400px;
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+        }
+    }
+
+    .slide-text,
+    .slide-image {
+        width: 50%;
+    }
+
+    .slide-text {
+        position: relative;
+    }
+
+    .slide-text-inner {
+        padding: 0 0 0 40px;
+        position: absolute;
+        top: 50%;
+        transform: translateY( -50% )
+    }
+
+    .slide-image {
+        height: 100%;
+
+        img {
+            height: 100%;
+            max-width: none;
+            width: auto;
+        }
+    }
+}
+
+@media only screen and ( min-width: 1024px ) {
+
+    // CLASSES
+    .p60 {
+        padding: 60px 0;
+    }
+
+    // HEADER
+    .site-description {
+        display: inline-block;
+        font-size: 24px;
+        margin: 0 20px 0 0;
+        padding: 0 20px 0 0;
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            background: $ltgray;
+            position: absolute;
+            height: 40px;
+            width: 1px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@media only screen and ( min-width: 1276px ) {
+    
+        // HOMEPAGE
+        .slide {
+            height: 550px;
+        }
+}

@@ -1,4 +1,9 @@
-jQuery( document ).ready( function( $ ) {
+$( document ).ready( function() {
+
+	$('.slider').slick({
+		autoplay: true,
+		autoplaySpeed: 5000
+	});
 
 	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
 	$('a[href*="#"]:not([href="#"])').click(function() {

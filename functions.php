@@ -120,11 +120,18 @@ add_action( 'widgets_init', 'msc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function msc_scripts() {
+
+	// Add slick.css
+	wp_enqueue_style( 'msc-slick-style', get_template_directory_uri() . '/css/slick.css' );
+
+	// Add slick-theme.css
+	wp_enqueue_style( 'msc-slicktheme-style', get_template_directory_uri() . '/css/slick-theme.css' );
+	
 	wp_enqueue_style( 'msc-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'msc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'msc-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'msc-slick', get_template_directory_uri() . '/js/slick.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'msc-custom', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
 

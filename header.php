@@ -16,7 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>.slider {/* stops slides from stacking breifly on page load */ display: none;}</style>
 	<?php wp_head(); ?>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </head>
@@ -33,16 +34,24 @@
 		</div>
 
 		<div class="mid-header">
-			<div class="constrain lg">
+			<div class="constrain lg flexxed">
 				<div class="site-branding">
-					<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-					<?php
-					$msc_description = get_bloginfo( 'description', 'display' );
-					if ( $msc_description || is_customize_preview() ) :
-						?>
-						<p class="site-description"><?php echo $msc_description; /* WPCS: xss ok. */ ?></p>
-					<?php endif; ?>
+					<div class="site-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php echo get_theme_mod( 'theme_logo' ); ?>" alt="">
+						</a>
+					</div>
+					
 				</div><!-- .site-branding -->
+				<div class="motto-search">
+					<?php
+						$msc_description = get_bloginfo( 'description', 'display' );
+						if ( $msc_description || is_customize_preview() ) : ?>
+						<div class="site-description"><?php echo $msc_description; /* WPCS: xss ok. */ ?></div>
+					<?php endif; ?>
+					<a href="#" class="search"><i class="fas fa-search"></i></a>
+					<!-- <?php get_search_form(); ?> -->
+				</div>
 			</div>
 		</div>
 

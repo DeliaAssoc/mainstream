@@ -420,6 +420,57 @@ template {
   flex-wrap: nowrap;
 }
 
+.p60 {
+  padding: 30px 0;
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.07);
+  height: 40px;
+  width: 40px;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #00b2e9;
+  font-family: "FontAwesome", sans-serif;
+  font-size: 40px;
+  line-height: 23px;
+  transition: all 0.25s ease;
+}
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  background-color: #00b2e9;
+  transition: all 0.25s ease;
+}
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  color: #1a1a1a;
+  transition: all 0.25s ease;
+}
+
+.slick-prev {
+  padding: 0 5px 0 0;
+  left: 20px;
+}
+.slick-prev:before {
+  content: '\f104';
+}
+
+.slick-next {
+  padding: 0 0 0 5px;
+  right: 20px;
+}
+.slick-next:before {
+  content: '\f105';
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -440,10 +491,11 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  letter-spacing: 0.35px;
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 dfn, cite, em, i {
@@ -527,24 +579,6 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
-}
-
-ul, ol {
-  margin: 0 0 1.5em 3em;
-}
-
-ul {
-  list-style: disc;
-}
-
-ol {
-  list-style: decimal;
-}
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
 }
 
 dt {
@@ -660,16 +694,17 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  color: royalblue;
-}
-
+a,
 a:visited {
-  color: purple;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #868686;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 
 a:focus {
@@ -772,12 +807,110 @@ a:hover, a:active {
   width: 50%;
 }
 
+.aux-header,
+.mid-header,
+.bottom-header {
+  padding: 5px 0;
+}
+
+.aux-header {
+  background-color: #dde1e3;
+  display: none;
+}
+
+.mid-header .flexxed {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.mid-header .search {
+  font-size: 20px;
+}
+
+.site-branding {
+  width: 50%;
+}
+
+.site-title {
+  width: 125px;
+}
+.site-title img {
+  display: block;
+}
+
+.motto-search {
+  text-align: right;
+  width: 50%;
+}
+
+.site-description {
+  display: none;
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.bottom-header {
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.slide.flexxed {
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.slide-text {
+  background-color: #00b2e9;
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.slide-text-inner {
+  padding: 20px;
+}
+
+.slide-link {
+  font-weight: 400;
+  padding: 0 0 0 20px;
+  position: relative;
+  text-decoration: none;
+}
+.slide-link:before {
+  content: '\f138';
+  display: block;
+  font-family: "FontAwesome", sans-serif;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}
+
+.slide-image {
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+.slide-image img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -863,6 +996,118 @@ object {
   display: block;
 }
 
+.site-footer {
+  color: #FFFFFF;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+.site-footer a {
+  color: #00b2e9;
+}
+.site-footer .address,
+.site-footer .contact {
+  margin: 0 0 10px 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .p60 {
+    padding: 40px 0;
+  }
+
+  .slide-text-inner {
+    padding: 20px 40px;
+  }
+}
+@media only screen and (min-width: 568px) {
+  .site-title {
+    width: 155px;
+  }
+
+  .motto-search {
+    padding: 5px 0 0 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .aux-header {
+    display: block;
+  }
+
+  .mid-header {
+    padding: 20px 0;
+  }
+
+  .site-title {
+    width: 200px;
+  }
+
+  .motto-search {
+    padding: 10px 0 0 0;
+  }
+
+  .slide {
+    height: 400px;
+  }
+  .slide.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .slide-text,
+  .slide-image {
+    width: 50%;
+  }
+
+  .slide-text {
+    position: relative;
+  }
+
+  .slide-text-inner {
+    padding: 0 0 0 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slide-image {
+    height: 100%;
+  }
+  .slide-image img {
+    height: 100%;
+    max-width: none;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .p60 {
+    padding: 60px 0;
+  }
+
+  .site-description {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 20px 0 0;
+    padding: 0 20px 0 0;
+    position: relative;
+  }
+  .site-description:after {
+    content: '';
+    display: block;
+    background: #dde1e3;
+    position: absolute;
+    height: 40px;
+    width: 1px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@media only screen and (min-width: 1276px) {
+  .slide {
+    height: 550px;
+  }
+}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
