@@ -33,10 +33,99 @@
         <?php endif; ?>
     </section><!-- .home-slider -->
 
-	<div class="entry-content">
-		<?php
-		    the_content();
-		?>
-	</div><!-- .entry-content -->
+    <section class="tabbed-links p60">
+        <div class="constrain">
+            <div class="tabs flexxed">
+                <a href="#" data-ref="products">Products</a>
+                <a href="#" data-ref="success">Success Stories</a>
+            </div>
+        </div><!-- . constrain -->
+        <div class="constrain">
+            <div class="tab-content">
+                <div id="product" class="tab-block flexxed">
+                    <?php $args = array(
+                        'post_type' => 'products',
+                        'posts_per_page' => -1
+                        );
+
+                        $proLoop = new WP_Query( $args );
+                        // Get Post Count
+                        $itemCount = wp_count_posts( 'products' )->publish;
+                        
+                        while ( $proLoop->have_posts() ) : $proLoop->the_post(); 
+                    ?>
+                        <a href="<?php the_permalink(); ?>" class="tab-block-item items-<?php echo $itemCount; ?>">
+                            <?php // Get image alt
+                                $imgID  = get_post_thumbnail_id($post->ID);
+                                $img    = wp_get_attachment_image_src($imgID,'full', false, ''); 
+                                $imgAlt = get_post_meta($imgID,'_wp_attachment_image_alt', true); ?>
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo $imgAlt; ?>">
+                            <span class="overlay">
+                                <?php the_title(); ?>
+                            </span>
+                        </a>  
+
+                    <?php endwhile;
+                        wp_reset_query(); ?>
+                    
+                </div>
+                <div id="success" class="tab-block flexxed">
+                    <?php $args = array(
+                        'post_type' => 'success',
+                        'posts_per_page' => -1
+                        );
+
+                        $proLoop = new WP_Query( $args );
+                        // Get Post Count
+                        $itemCount = wp_count_posts( 'products' )->publish;
+                        
+                        while ( $proLoop->have_posts() ) : $proLoop->the_post(); 
+                    ?>
+                        <a href="<?php the_permalink(); ?>" class="tab-block-item items-<?php echo $itemCount; ?>">
+                            <?php // Get image alt
+                                $imgID  = get_post_thumbnail_id($post->ID);
+                                $img    = wp_get_attachment_image_src($imgID,'full', false, ''); 
+                                $imgAlt = get_post_meta($imgID,'_wp_attachment_image_alt', true); ?>
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo $imgAlt; ?>">
+                            <span class="overlay">
+                                <?php the_title(); ?>
+                            </span>
+                        </a>  
+
+                    <?php endwhile;
+                        wp_reset_query(); ?>
+                </div>
+            </div><!-- .tabbed-content -->
+        </div><!-- .contrain .flexxed -->
+    </section><!-- .tabbed-links -->
+
+    <?php if ( have_rows( 'product_category_items' ) ) : ?>
+
+        <section class="what-we-do p60">
+            <div class="constrain flexxed">
+                <div class="intro">
+                    <div class="title"><?php the_field( 'product_category_section_title' ); ?></div>
+                    <a href="<?php the_field( 'product_category_sublink_text_url' ); ?>" class="subtitle"><?php the_field( 'product_category_sublink_text' ); ?></a>
+                </div>
+                <div class="category-items flexxed">
+                    <?php while ( have_rows( 'product_category_items' ) ) : the_row(); ?>
+                        <a class="category-item" href="<?php the_sub_field( 'category_url' ); ?>">
+                            <?php $icon = get_sub_field( 'category_icon' ); ?>
+                            <img src="<?php echo $icon[ 'url' ]; ?>" alt="<?php echo $icon[ 'alt' ]; ?>">
+                            <h4 class="category-title"><?php the_sub_field( 'category_title' ); ?></h4>
+                            <div class="category-link">Read More</div>
+                        </a>
+                    <?php endwhile; ?>
+                </div>
+            </div><!-- .constrain .flexxed -->
+        </section><!-- .what-we-do -->
+
+    <?php endif; ?>
+
+    <section class="cta-module blue-bg p60">
+        <div class="constrain">
+            Innovative. Responsive. Accurate.
+        </div>
+    </section><!-- .cta-module -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

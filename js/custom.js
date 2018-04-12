@@ -5,6 +5,30 @@ $( document ).ready( function() {
 		autoplaySpeed: 5000
 	});
 
+	// Tab functionality
+	$( '[data-ref="products"]' ).addClass( 'active' );
+
+	$( '.tabs a' ).on( 'click', function( e ) {
+		
+		e.preventDefault();
+
+		$ref = $( this ).data( 'ref' ),
+		$product = $( '#product' ),
+		$success = $( '#success' );
+
+		$( '.tabs a' ).removeClass( 'active' );
+
+		if ( $ref == 'products' ) {
+			$( this ).addClass( 'active' );
+			$success.removeClass( 'visible' );
+			$product.addClass( 'visible' );
+		} else if ( $ref == 'success' ) {
+			$( this ).addClass( 'active' );
+			$product.removeClass( 'visible' );
+			$success.addClass( 'visible' );
+		}
+	  });
+
 	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
 	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

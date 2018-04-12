@@ -8,11 +8,25 @@
     .slide-text-inner {
         padding: 20px 40px;
     }
+
+    // HOMEPAGE
+    .tabbed-links {
+
+        &.p60 {
+            padding: 40px 0 30px 0;
+        }
+    }
 }
 
 @media only screen and ( min-width: 568px ) {
 
     // HEADER
+    button#responsive-menu-button {
+        height: 45px !important;
+        right: 7% !important;
+        width: 45px !important;
+    }
+
     .site-title {
         width: 155px;
     }
@@ -20,12 +34,36 @@
     .motto-search {
         padding: 5px 0 0 0;
     }
+
+    // HOMEPAGE
+    .tab-block {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .items-2 ,.items-3, .items-4, .items-5, .items-6, .items-7, .items-8, .items-9, .items-10, .items-11, .items-12,.items-13, .items-14, .items-15 {
+            width: 49%;
+        }
+    }
 }
 
 
 @media only screen and ( min-width: 768px ) {
 
     // HEADER
+    button#responsive-menu-button {
+        top: 50px !important;
+    }
+
     .aux-header {
         display: block;
     }
@@ -79,6 +117,114 @@
             width: auto;
         }
     }
+
+    .tabs {
+        padding: 0 0 20px 0;
+        &.flexxed {
+            flex-direction: row;
+            text-align: left;
+        }
+
+        a {
+            border-bottom: 0;
+            border-right: 1px solid $ltgray;
+            display: block;
+            float: left;
+            min-width: 145px;
+            margin: 0 29px 0 0;
+            padding: 0 20px 0 0;
+        }
+    }
+
+    .tab-block {
+
+        .items-3, .items-4, .items-5, .items-6, .items-7, .items-8, .items-9, .items-10, .items-11, .items-12,.items-13, .items-14, .items-15 {
+            width: 32%;
+        }
+    }
+
+    .tab-block-item {
+        margin: 0 0 20px 0;
+    }
+
+    .what-we-do {
+
+        > .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        }
+
+        .intro {
+            text-align: left;
+            width: 30%;
+        }
+
+        .title {
+            font-size: 52px;
+            max-width: 250px;
+        }
+
+        a.subtitle {
+            margin: 0;
+            padding: 0 0 0 30px;
+        }
+
+        .category-items {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            padding: 0;
+            width: 70%;
+        }
+
+        a.category-item {
+            max-width: 350px;
+        }
+    }
+}
+
+@media only screen and ( min-width: 960px ) {
+
+    .what-we-do {
+
+        .intro {
+            width: 25%;
+        }
+
+        .title {
+            margin: 0 0 30px 0;
+        }
+
+        .category-items {
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            width: 75%;
+
+            &.flexxed {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
+                        flex-direction: row;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+            }
+        }
+
+        a.category-item {
+            margin: 0;
+            width: 33%;
+
+            img {
+                margin: 0 auto 20px auto;
+            }
+        }
+    }
 }
 
 @media only screen and ( min-width: 1024px ) {
@@ -106,6 +252,25 @@
             right: 0;
             top: 50%;
             transform: translateY(-50%);
+        }
+    }
+
+    // HOMEPAGE
+    .tabbed-links {
+
+        &.p60 {
+            padding: 60px 0 40px 0;
+        }
+    }
+
+    .tab-block {
+
+        .items-4, .items-7, .items-8, .items-11, .items-12 {
+            width: 24%;
+        }
+
+        .items-5, .items-9, .items-10, .items-13, .items-14, .items-15 {
+            width: 19%;
         }
     }
 }

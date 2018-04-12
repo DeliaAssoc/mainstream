@@ -7,7 +7,7 @@ $lightest: #FFFFFF;
 $darkest: #1a1a1a;
 $accent: rgba(0, 178, 233, 1);
 $ltgray: #dde1e3;
-$dkgray: #868686;
+$dkgray: #555555;
 $hover: #cc0000;
 
 // ---------------------------------------------------
@@ -23,11 +23,10 @@ $med-shadow: 1px 1px 1px rgba(0,0,0,0.35);
 //    Typography
 // ---------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Poppins|Prompt:300,400,500,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900');
 
 $font-color: #34435e;
-$pop: 'Poppins', sans-serif;
-$prom: 'Prompt', sans-serif;
+$mont:  'Montserrat', sans-serif;
 $fa: 'FontAwesome', sans-serif;
 
 
@@ -37,4 +36,4 @@ $fa: 'FontAwesome', sans-serif;
 
 
 $transition-fast: all 0.15s ease;
-$transition-medium: all 0.25s ease;
+$transition-medium: all 0.25s;

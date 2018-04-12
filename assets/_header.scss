@@ -1,4 +1,8 @@
 // HEADER
+button#responsive-menu-button {
+    height: 37px !important;
+    width: 40px !important;
+}
 
 .aux-header,
 .mid-header,
@@ -9,6 +13,9 @@
 .aux-header {
     background-color: $ltgray;
     display: none;
+    font-size: 12px;
+    text-align: right;
+    text-transform: uppercase;
 }
 
 .mid-header {
@@ -47,9 +54,8 @@
 
 .site-description {
     display: none;
-    font-family: $prom;
+    font-family: $mont;
     font-weight: 900;
-    letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 
