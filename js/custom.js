@@ -1,12 +1,29 @@
 $( document ).ready( function() {
 
+	// Hide top bar on scroll
+	$( window ).scroll( function(){
+
+		var auxHeader = $( '.aux-header' ),
+			wScroll = $( this ).scrollTop();
+
+			if ( wScroll > 300 ) {
+				auxHeader.addClass( 'scrolled' );
+			} else {
+				auxHeader.removeClass( 'scrolled' );
+			}
+	});
+
 	$('.slider').slick({
-		autoplay: true,
+		// autoplay: true,
 		autoplaySpeed: 5000
 	});
 
 	// Tab functionality
 	$( '[data-ref="products"]' ).addClass( 'active' );
+
+	// Set 1st product tab and tab content to visible on page load 
+	$( '.tabs' ).find( 'li' ).first().find( 'a' ).addClass( 'active' );
+	$( '.tab-content' ).find( '.tab-block' ).first().addClass( 'visible' )
 
 	$( '.tabs a' ).on( 'click', function( e ) {
 		

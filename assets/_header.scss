@@ -4,6 +4,14 @@ button#responsive-menu-button {
     width: 40px !important;
 }
 
+.site-header {
+    background-color: $lightest;
+    box-shadow: $light-shadow;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
 .aux-header,
 .mid-header,
 .bottom-header {

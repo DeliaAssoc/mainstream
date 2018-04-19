@@ -68,9 +68,29 @@
 	background-color: #fff;
 }
 
+.accent-text {
+	color: $accent;
+}
+
+.darkest-text {
+	color: $darkest;
+}
+
+.dkgray-text {
+	color: $dkgray;
+}
+
+.ltgray-text {
+	color: $ltgray;
+}
+
+.white-text {
+	color: #fff;
+}
+
 .slick-prev,
 .slick-next {
-	background-color: $darkest;
+	background-color: rgba( $darkest, 0.5 );
 	border-radius: 20px;
 	box-shadow: $light-shadow;
 	height: 40px;

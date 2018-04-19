@@ -4,4 +4,12 @@
         min-height: auto;
         height: 100vh;
     }
+
+    .site-content {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto; /* 2 */
+        padding: var(--space) var(--space) 0;
+        width: 100%;
+      }
 }

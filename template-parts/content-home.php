@@ -20,7 +20,7 @@
                             <div class="slide-text-inner">
                                 <p>
                                 <a class="slide-text-link" href="<?php the_sub_field( 'slide_link_url' ); ?>"><?php the_sub_field( 'slide_text' ); ?></a></p>
-                                <a class="slide-link" href="<?php the_sub_field( 'slide_link_url' ); ?>"><?php the_sub_field( 'slide_link_text' ); ?></a>
+                                <a class="chevron-link" href="<?php the_sub_field( 'slide_link_url' ); ?>"><?php the_sub_field( 'slide_link_text' ); ?></a>
                             </div>
                         </div>
                         <div class="slide-image">
@@ -34,13 +34,13 @@
     </section><!-- .home-slider -->
 
     <section class="tabbed-links p60">
-        <div class="constrain">
+        <div class="constrain lg">
             <div class="tabs flexxed">
                 <a href="#" data-ref="products">Products</a>
                 <a href="#" data-ref="success">Success Stories</a>
             </div>
         </div><!-- . constrain -->
-        <div class="constrain">
+        <div class="constrain lg">
             <div class="tab-content">
                 <div id="product" class="tab-block flexxed">
                     <?php $args = array(
@@ -71,13 +71,13 @@
                 </div>
                 <div id="success" class="tab-block flexxed">
                     <?php $args = array(
-                        'post_type' => 'success',
+                        'post_type' => 'success_stories',
                         'posts_per_page' => -1
                         );
 
                         $proLoop = new WP_Query( $args );
                         // Get Post Count
-                        $itemCount = wp_count_posts( 'products' )->publish;
+                        $itemCount = wp_count_posts( 'success_stories' )->publish;
                         
                         while ( $proLoop->have_posts() ) : $proLoop->the_post(); 
                     ?>
@@ -99,10 +99,26 @@
         </div><!-- .contrain .flexxed -->
     </section><!-- .tabbed-links -->
 
+    <section class="home intro-text p60 ltgray-bg">
+        <div class="constrain lg flexxed">
+            <div class="intro-text-block">
+                <h3><?php the_field( 'homepage_introduction_title_column_1' ); ?></h3>
+                <div class="text">
+                    <?php the_field( 'homepage_introduction_text_column_1' ); ?>
+                </div>
+            </div>
+            <div class="intro-text-block">
+                <h3><?php the_field( 'homepage_introduction_title_column_2' ); ?></h3>
+                <div class="text">
+                    <?php the_field( 'homepage_introduction_text_column_2' ); ?>
+                </div>
+            </div>
+    </section>
+
     <?php if ( have_rows( 'product_category_items' ) ) : ?>
 
         <section class="what-we-do p60">
-            <div class="constrain flexxed">
+            <div class="constrain lg flexxed">
                 <div class="intro">
                     <div class="title"><?php the_field( 'product_category_section_title' ); ?></div>
                     <a href="<?php the_field( 'product_category_sublink_text_url' ); ?>" class="subtitle"><?php the_field( 'product_category_sublink_text' ); ?></a>
@@ -122,7 +138,7 @@
 
     <?php endif; ?>
 
-    <section class="cta-module blue-bg p60">
+    <section class="block-module cta-block blue-bg p60">
         <div class="constrain">
             Innovative. Responsive. Accurate.
         </div>

@@ -131,7 +131,7 @@ function msc_scripts() {
 
 	wp_enqueue_script( 'msc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	// wp_enqueue_script( 'msc-slick', get_template_directory_uri() . '/js/slick.js', array(), '20151215', true );
+	// wp_enqueue_script( 'msc-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'msc-custom', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
 

@@ -5,8 +5,12 @@
 ## Posts and pages
 --------------------------------------------------------------*/
 
-// CTA MODULE
-.cta-module {
+.site-content {
+	margin: 40px 0 0 0;
+}
+
+// BLOCK MODULE
+.block-module {
 	font-size: 30px;
 	font-weight: 900;
 	text-align: center;
@@ -33,17 +37,25 @@
 }
 
 .slide-text-inner {
+	max-width: 706px;
 	padding: 20px;
+
+	p {
+		font-size: 20px;
+	}
 }
 
-.slide-link {
-	font-weight: 400;
-	padding: 0 0 0 20px;
+a.chevron-link {
+	font-weight: 700;
+	padding: 0 0 0 25px;
 	position: relative;
 	text-decoration: none;
+	text-transform: uppercase;
 
 	&:before {
-		content: '\f138';
+		background-image: url( 'http://localhost/mainstream/wp-content/uploads/2018/04/chevron-black.png' );
+		background-size: cover;
+		content: '';
 		display: block;
 		font-family: $fa;
 		height: 20px;
@@ -94,10 +106,19 @@
 	}
 }
 
+.tab-block {
+	display: none;
+}
+
+.tab-block.visible {
+	display: flex;
+}
+
 .tab-block-item {
 	display: block;
 	height: 100%;
 	margin: 0 0 10px 0;
+	max-height: 300px;
 	overflow: hidden;
 	position: relative;
 
@@ -129,14 +150,15 @@
 	}
 
 	&:after {
+		background-image: url( 'http://localhost/mainstream/wp-content/uploads/2018/04/chevron-white.png' );
+		background-size: cover;
 		bottom: 20px;
-		color: $lightest;
-		content: '\f138';
-		font-family: $fa;
-		font-size: 30px;
+		content: '';
+		height: 30px;
 		left: 20px;
 		position: absolute;
 		transition: $transition-medium;
+		width: 30px;
 		z-index: 15;
 	}
 
@@ -156,7 +178,8 @@
 		}
 
 		&:after {
-			color: $darkest;
+			background-image: url( 'http://localhost/mainstream/wp-content/uploads/2018/04/chevron-black.png' );
+			content: '';
 			transition: $transition-medium;
 		}
 	}
@@ -173,6 +196,13 @@
 		top: 20px;
 		transition: $transition-medium;
 		z-index: 5;
+	}
+}
+
+.home.intro-text {
+
+	h3 {
+		font-weight: 900;
 	}
 }
 
@@ -261,6 +291,14 @@
 				top: 0;
 			}
 		}
+	}
+}
+
+// PRODUCTS
+.single-products {
+
+	article {
+		padding: 30px 0 0 0;
 	}
 }
 

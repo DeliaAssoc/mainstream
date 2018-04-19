@@ -9,6 +9,11 @@
         padding: 20px 40px;
     }
 
+    // TYPOGRAPHY
+    h1.page-title {
+        font-size: 42px;
+    }
+
     // HOMEPAGE
     .tabbed-links {
 
@@ -35,7 +40,15 @@
         padding: 5px 0 0 0;
     }
 
+    .site-content {
+        margin: 50px 0 0 0;
+    }
+
     // HOMEPAGE
+    .slide-text-inner p {
+        font-size: 24px;
+    }
+
     .tab-block {
 
         &.flexxed {
@@ -66,6 +79,15 @@
 
     .aux-header {
         display: block;
+        height: 28px;
+        overflow: hidden;
+        transition: $transition-medium;
+
+        &.scrolled {
+            height: 0;
+            padding: 0;
+            transition: $transition-medium;
+        }
     }
 
     .mid-header {
@@ -78,6 +100,10 @@
 
     .motto-search {
         padding: 10px 0 0 0;
+    }
+
+    .site-content {
+        margin: 120px 0 0 0;
     }
 
     // HOMEPAGE
@@ -105,7 +131,11 @@
         padding: 0 0 0 40px;
         position: absolute;
         top: 50%;
-        transform: translateY( -50% )
+        transform: translateY( -50% );
+
+        p {
+            font-size: 28px;
+        }
     }
 
     .slide-image {
@@ -145,6 +175,23 @@
 
     .tab-block-item {
         margin: 0 0 20px 0;
+    }
+
+    .home.intro-text {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .intro-text-block {
+            width: 48%;
+        }
     }
 
     .what-we-do {
@@ -188,6 +235,37 @@
 }
 
 @media only screen and ( min-width: 960px ) {
+
+    // HEADER
+    .bottom-header {
+        padding: 10px 0;
+    }
+
+    .bottom-header {
+        color: $lightest;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            float: none;
+        }
+
+        a, a:visited {
+            color: $lightest;
+            font-weight: 700;
+            padding: 0 15px;
+            text-transform: uppercase;
+        }
+    }
+
+    .site-content {
+        margin: 165px 0 0 0;
+    }
+
+    // HOMEPAGE
+    .slide-text-inner p {
+        font-size: 34px;
+    }
 
     .what-we-do {
 
@@ -234,6 +312,11 @@
         padding: 60px 0;
     }
 
+    // TYPOGRAPHY
+    h1.page-title {
+        font-size: 54px;
+    }
+
     // HEADER
     .site-description {
         display: inline-block;
@@ -255,7 +338,18 @@
         }
     }
 
+    .bottom-header {
+
+        a {
+            padding: 0 20px;
+        }
+    }
+
     // HOMEPAGE
+    .slide-text-inner p {
+        font-size: 46px;
+    }
+
     .tabbed-links {
 
         &.p60 {
@@ -273,6 +367,29 @@
             width: 19%;
         }
     }
+
+    .home.intro-text {
+
+        .intro-text-block {
+            width: 47%;
+        }
+    }
+}
+
+@media only screen and ( min-width: 1200px ) {
+
+    // HEADER
+    .bottom-header {
+
+        a {
+            padding: 0 35px;
+        }
+    }
+
+    // HOMEPAGE
+    .slide-text-inner p {
+        font-size: 39px;
+    }
 }
 
 @media only screen and ( min-width: 1276px ) {
@@ -280,5 +397,9 @@
         // HOMEPAGE
         .slide {
             height: 550px;
+        }
+
+        .slide-text-inner p {
+            font-size: 50px;
         }
 }
