@@ -4,19 +4,26 @@ $( document ).ready( function() {
 	$( window ).scroll( function(){
 
 		var auxHeader = $( '.aux-header' ),
-			wScroll = $( this ).scrollTop();
+			wScroll = $( this ).scrollTop(),
+			mobileBtn = $( '#responsive-menu-button' );
 
 			if ( wScroll > 300 ) {
 				auxHeader.addClass( 'scrolled' );
+				mobileBtn.addClass( 'scrolled' )
 			} else {
 				auxHeader.removeClass( 'scrolled' );
+				mobileBtn.removeClass( 'scrolled' );
 			}
 	});
 
+	// HOMEPAGE SLIDER
 	$('.slider').slick({
 		// autoplay: true,
 		autoplaySpeed: 5000
 	});
+
+	// PRODUCT PAGE SLIDER
+	$( '.product-slider' ).slick();
 
 	// Tab functionality
 	$( '[data-ref="products"]' ).addClass( 'active' );

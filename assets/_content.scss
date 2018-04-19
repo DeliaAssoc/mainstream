@@ -9,12 +9,35 @@
 	margin: 40px 0 0 0;
 }
 
-// BLOCK MODULE
+// HIGHLIGHT MODULE
 .block-module {
 	font-size: 30px;
 	font-weight: 900;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+// CTA CONTACT MODULE
+.cta-contact-module {
+	color: $ltgray;
+	text-transform: uppercase;
+
+	.text-block {
+		font-size: 24px;
+		font-weight: 900;
+		line-height: 1.15em;
+	}
+
+	a {
+		color: $ltgray;
+	}
+
+	.link {
+		
+		a {
+			color: $lightest;
+		}
+	}
 }
 
 // HOMEPAGE
@@ -42,25 +65,6 @@
 
 	p {
 		font-size: 20px;
-	}
-}
-
-a.chevron-link {
-	font-weight: 700;
-	padding: 0 0 0 25px;
-	position: relative;
-	text-decoration: none;
-	text-transform: uppercase;
-
-	&:before {
-		background-image: url( 'http://localhost/mainstream/wp-content/uploads/2018/04/chevron-black.png' );
-		background-size: cover;
-		content: '';
-		display: block;
-		font-family: $fa;
-		height: 20px;
-		position: absolute;
-		width: 20px;
 	}
 }
 
@@ -236,12 +240,14 @@ a.chevron-link {
 		text-transform: uppercase;
 
 		&:before {
-			content: '\f138';
-			font-family: $fa;
-			font-size: 25px;
+			background-image: url( 'http://localhost/mainstream/wp-content/uploads/2018/04/chevron-white.png' );
+			background-size: cover;
+			content: '';
+			height: 20px;
 			left: 0;
 			position: absolute;
 			top: 8px;
+			width: 20px;
 		}
 	}
 
@@ -294,13 +300,59 @@ a.chevron-link {
 	}
 }
 
-// PRODUCTS
-.single-products {
+// PRODUCT PAGE
+.intro-text {
+	font-size: 20px;
+	margin: 0 0 1em 0;
+}
 
-	article {
-		padding: 30px 0 0 0;
+.body-content {
+
+	.flexxed {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		    -ms-flex-direction: column-reverse;
+		        flex-direction: column-reverse;
 	}
 }
+
+.product-slider {
+	margin: 0 0 1em 0;
+}
+
+.fandb-block {
+	
+	.content {
+		padding: 0 10px;
+	}
+}
+
+.features {
+
+	h2 {
+		color: $accent;
+	}
+}
+
+.comp-opt-types {
+
+	&.p60 {
+		padding: 40px 0 30px;
+	}
+
+	.item-block {
+		background-color: $ltgray;
+		margin: 0 0 1em 0;
+		padding: 20px 10px;
+	}
+
+	.block-image, h4 {
+		text-align: center;
+	}
+
+}
+
+
 
 
 /*--------------------------------------------------------------

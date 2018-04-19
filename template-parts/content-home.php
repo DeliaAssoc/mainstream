@@ -20,7 +20,7 @@
                             <div class="slide-text-inner">
                                 <p>
                                 <a class="slide-text-link" href="<?php the_sub_field( 'slide_link_url' ); ?>"><?php the_sub_field( 'slide_text' ); ?></a></p>
-                                <a class="chevron-link" href="<?php the_sub_field( 'slide_link_url' ); ?>"><?php the_sub_field( 'slide_link_text' ); ?></a>
+                                <a class="chevron-left" href="<?php the_sub_field( 'slide_link_url' ); ?>"><?php the_sub_field( 'slide_link_text' ); ?></a>
                             </div>
                         </div>
                         <div class="slide-image">
@@ -138,9 +138,9 @@
 
     <?php endif; ?>
 
-    <section class="block-module cta-block blue-bg p60">
+    <section class="block-module cta-block accent-bg p60">
         <div class="constrain">
-            Innovative. Responsive. Accurate.
+            <?php the_field( 'module_text', 'option' ); ?>
         </div>
     </section><!-- .cta-module -->
 

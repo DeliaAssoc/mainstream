@@ -1,20 +1,20 @@
 // STICKY FOOTER
-.site {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	min-height: 100vh;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-}
+// .site {
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	min-height: 100vh;
+// 	-webkit-box-orient: vertical;
+// 	-webkit-box-direction: normal;
+// 	    -ms-flex-direction: column;
+// 	        flex-direction: column;
+// }
 
-.site-content {
-	-webkit-box-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
-}
+// .site-content {
+// 	-webkit-box-flex: 1;
+// 	    -ms-flex: 1;
+// 	        flex: 1;
+// }
 
 .constrain {
 	display: block;
@@ -48,16 +48,18 @@
 	padding: 30px 0;
 }
 
-.blue-bg {
+.accent-bg {
 	background-color: $accent;
 }
 
 .darkest-bg {
 	background-color: $darkest;
+	color: $lightest;
 }
 
 .dkgray-bg {
 	background-color: $dkgray;
+	color: $lightest;
 }
 
 .ltgray-bg {
@@ -86,6 +88,59 @@
 
 .white-text {
 	color: #fff;
+}
+
+.chevron-left,
+a.chevron-left,
+.chevron-right,
+a.chevron-right {
+	font-weight: 700;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:before, &:after {
+		background-size: cover;
+		content: '';
+		display: block;
+		height: 20px;
+		position: absolute;
+		top: -1px;
+		width: 20px;
+	}
+}
+
+.chevron-right,
+a.chevron-right {
+	margin: 0 25px 0 0;
+
+	&:after {
+		background-image: url( 'http://localhost/mainstream/wp-content/uploads/2018/04/chevron-black.png' );
+		right: -25px;
+	}
+
+	&.white {
+
+		&:after {
+			background-image: url( 'http://localhost/mainstream/wp-content/uploads/2018/04/chevron-white.png' );
+		}
+	}
+}
+
+.chevron-left,
+a.chevron-left {
+	padding: 0 0 0 25px;
+
+	&:before {
+		background-image: url( 'http://localhost/mainstream/wp-content/uploads/2018/04/chevron-black.png' );
+	}
+
+	&.white {
+
+		&:before {
+			background-image: url( 'http://localhost/mainstream/wp-content/uploads/2018/04/chevron-white.png' );
+		}
+	}
 }
 
 .slick-prev,

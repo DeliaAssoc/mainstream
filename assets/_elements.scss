@@ -1,13 +1,13 @@
 /* Just for funs and it looks cool */
 ::-moz-selection {
-	background: rgb(53, 125, 184);
-	color: #fff;
+	background: $accent;
+	color: $darkest;
 	text-shadow: none;
 }
 
 ::selection {
-	background: rgb(53, 125, 184);
-	color: #fff;
+	background: $accent;
+	color: $darkest;
 	text-shadow: none;
 }
 
@@ -37,23 +37,23 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-// ul, ol {
-// 	margin: 0 0 1.5em 3em;
-// }
+ul, ol {
+	margin: 0;
+	padding: 0 0 0 20px;
+}
 
-// ul {
-// 	list-style: disc;
-// }
+ul {
+	list-style: disc;
+}
 
-// ol {
-// 	list-style: decimal;
-// }
+ol {
+	list-style: decimal;
+}
 
-// li > ul,
-// li > ol {
-// 	margin-bottom: 0;
-// 	margin-left: 1.5em;
-// }
+li > ul,
+li > ol {
+	margin: 0;
+}
 
 dt {
 	font-weight: bold;
