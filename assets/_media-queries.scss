@@ -318,6 +318,49 @@
         }
     }
 
+    // SUCCESS STORY
+    .success {
+
+        .project-details {
+
+            .flexxed {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
+                        flex-direction: row;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+            }
+
+            .detail {
+                width: 32%;
+            }
+        }
+    }
+
+    .success-images {
+        overflow: hidden;
+        padding: 0 0 60px 0;
+    }
+
+    .success-slider {
+
+        .slick-list {
+            overflow: visible;
+        }
+
+        .slide {
+            height: auto;
+            margin: 0 20px 0 0;
+            // width: 620px !important;
+        }
+
+        .slick-dots {
+            bottom: -45px;
+        }
+    }
+
     // FOOTER
     .left-footer {
         -webkit-box-align: center;
@@ -476,6 +519,39 @@
             }
         }
     }
+
+        // SUCCESS STORY
+        .success {
+
+            .intro-text {
+
+                .flexxed {
+                    display: block;
+                }
+            }
+
+            .project-text {
+                float: left;
+                width: 68%;
+            }
+
+            .project-details {
+                float: right;
+                padding: 20px;
+                width: 28%;
+            }
+
+            .project-details {
+    
+                &.flexxed {
+                    flex-direction: column;
+                }
+    
+                .detail {
+                    width: auto;
+                }
+            }
+        }
 }
 
 @media only screen and ( min-width: 1024px ) {
@@ -584,6 +660,14 @@
         }
     }
 
+    // SUCCESS STORY
+    .success-slider {
+
+        .slide {
+            margin: 0 30px 0 0;
+        }
+    }
+    
     // FOOTER
     .site-footer {
 
@@ -717,6 +801,14 @@
             .content {
                 padding: 0 0 0 30px;
             }
+        }
+    }
+
+    // SUCCESS STORY
+    .success-slider {
+
+        .slide {
+            margin: 0;
         }
     }
 

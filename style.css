@@ -450,7 +450,23 @@ template {
 }
 
 .chevron-left,
-a.chevron-left,
+a.chevron-left {
+  font-weight: 700;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.chevron-left:before,
+a.chevron-left:before {
+  background-size: cover;
+  content: '';
+  display: block;
+  height: 20px;
+  position: absolute;
+  top: -1px;
+  width: 20px;
+}
+
 .chevron-right,
 a.chevron-right {
   font-weight: 700;
@@ -458,12 +474,7 @@ a.chevron-right {
   text-decoration: none;
   text-transform: uppercase;
 }
-.chevron-left:before, .chevron-left:after,
-a.chevron-left:before,
-a.chevron-left:after,
-.chevron-right:before,
 .chevron-right:after,
-a.chevron-right:before,
 a.chevron-right:after {
   background-size: cover;
   content: '';
@@ -546,6 +557,20 @@ a.chevron-left.white:before {
 }
 .slick-next:before {
   content: '\f105';
+}
+
+.slick-dots li button:before {
+  font-size: 20px;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  color: #00b2e9;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #00b2e9;
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -1292,6 +1317,33 @@ button#responsive-menu-button {
   text-align: center;
 }
 
+.success .intro-text > .flexxed {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.project-details {
+  background-color: #dde1e3;
+  margin: 0 0 1em 0;
+  padding: 10px;
+}
+.project-details .detail {
+  margin: 0 0 10px 0;
+}
+.project-details h4 {
+  margin: 0;
+}
+.project-details a.chevron-left {
+  display: block;
+  margin: 30px 0 0 0;
+}
+.project-details a.chevron-left:before {
+  top: 4px;
+  left: 0;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1654,6 +1706,35 @@ object {
     width: 50%;
   }
 
+  .success .project-details .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .success .project-details .detail {
+    width: 32%;
+  }
+
+  .success-images {
+    overflow: hidden;
+    padding: 0 0 60px 0;
+  }
+
+  .success-slider .slick-list {
+    overflow: visible;
+  }
+  .success-slider .slide {
+    height: auto;
+    margin: 0 20px 0 0;
+  }
+  .success-slider .slick-dots {
+    bottom: -45px;
+  }
+
   .left-footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1774,6 +1855,25 @@ object {
     float: left;
     padding: 0 10px 0 20px;
   }
+
+  .success .intro-text .flexxed {
+    display: block;
+  }
+  .success .project-text {
+    float: left;
+    width: 68%;
+  }
+  .success .project-details {
+    float: right;
+    padding: 20px;
+    width: 28%;
+  }
+  .success .project-details.flexxed {
+    flex-direction: column;
+  }
+  .success .project-details .detail {
+    width: auto;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .p60 {
@@ -1848,6 +1948,10 @@ object {
   }
   .comp-opt-types .item-block {
     margin: 0 0 20px 0;
+  }
+
+  .success-slider .slide {
+    margin: 0 30px 0 0;
   }
 
   .site-footer .flexxed {
@@ -1948,6 +2052,10 @@ object {
   }
   .fandb-block:last-of-type .content {
     padding: 0 0 0 30px;
+  }
+
+  .success-slider .slide {
+    margin: 0;
   }
 
   .footer-logo {

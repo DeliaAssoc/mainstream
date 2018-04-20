@@ -25,6 +25,23 @@ $( document ).ready( function() {
 	// PRODUCT PAGE SLIDER
 	$( '.product-slider' ).slick();
 
+	// SUCCESS SLIDER
+	$('.success-slider').slick({
+		infinite: false,
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 641,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	  });
+
 	// Tab functionality
 	$( '[data-ref="products"]' ).addClass( 'active' );
 
