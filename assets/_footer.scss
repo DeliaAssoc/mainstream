@@ -2,13 +2,16 @@
     color: $lightest;
     background-color: $darkest;
     text-align: center;
+    text-transform: uppercase;
 
     a {
-        color: $accent;
+        color: $lightest;
+        font-weight: 700;
     }
 
-    .address,
-    .contact {
+    .city.text,
+    .fax.text,
+    .email.text {
         margin: 0 0 10px 0;
     }
 }

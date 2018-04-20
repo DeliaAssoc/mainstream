@@ -317,6 +317,34 @@
             width: 50%;
         }
     }
+
+    // FOOTER
+    .left-footer {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: space-between;
+            -ms-flex-pack: space-between;
+                justify-content: space-between;
+        margin: 0 0 20px 0;
+    }
+
+    .footer-logo,
+    .contact-info {
+        width: 47%;
+    }
+
+    .footer-logo {
+        text-align: right;
+    }
+
+    .contact-info {
+        text-align: left;
+    }
 }
 
 @media only screen and ( min-width: 860px ) {
@@ -555,6 +583,75 @@
             margin: 0 0 20px 0;
         }
     }
+
+    // FOOTER
+    .site-footer {
+
+        .flexxed {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .left-footer {
+        margin: 0;
+        width: 70%;
+    }
+
+    .footer-logo {
+        width: 40%;
+    }
+
+    .contact-info {
+        width: 58%;
+
+        .street.text,
+        .city.text,
+        .phone.text,
+        .fax.text {
+            display: inline-block;
+            margin: 0 0 5px 0;
+        }
+
+        .street.text,
+        .phone.text {
+            margin: 0 10px 0 0;
+            padding: 0 10px 0 0;
+            position: relative;
+
+            &:after {
+                color: $accent;
+                content: '|';
+                position: absolute;
+                right: -2px;
+                top: -1px;
+            }
+        }
+
+        .email.text {
+            margin: 0;
+        }
+    }
+
+    .right-footer {
+        text-align: right;
+        width: 25%;
+
+        .copyright.text,
+        .privacy.text,
+        .sitemap.text {
+            display: block;
+            margin: 0 0 5px 0;
+        }
+    }
 }
 
 @media only screen and ( min-width: 1200px ) {
@@ -584,6 +681,11 @@
         .item-block {
             width: 23%;
         }
+    }
+
+    // FOOTER 
+    .left-footer {
+        width: 60%;
     }
 }
 
@@ -616,5 +718,14 @@
                 padding: 0 0 0 30px;
             }
         }
+    }
+
+    // FOOTER
+    .footer-logo {
+        width: 35%;
+    }
+
+    .contact-info {
+        width: 63%;
     }
 }
