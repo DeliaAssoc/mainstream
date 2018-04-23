@@ -186,4 +186,22 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Products Page Options',
+		'menu_title'	=> 'Products Page Options',
+		'menu_slug' 	=> 'products-page-settings',
+		'capability'	=> 'edit_posts',
+		'position'		=> 5,
+		'redirect'		=> false
+	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Success Stories Options',
+		'menu_title'	=> 'Success Stories Options',
+		'menu_slug' 	=> 'success-page-settings',
+		'capability'	=> 'edit_posts',
+		'position'		=> 6,
+		'redirect'		=> false
+	));
 }

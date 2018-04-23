@@ -71,13 +71,13 @@
                 </div>
                 <div id="success" class="tab-block flexxed">
                     <?php $args = array(
-                        'post_type' => 'success_stories',
+                        'post_type' => 'success',
                         'posts_per_page' => -1
                         );
 
                         $proLoop = new WP_Query( $args );
                         // Get Post Count
-                        $itemCount = wp_count_posts( 'success_stories' )->publish;
+                        $itemCount = wp_count_posts( 'success' )->publish;
                         
                         while ( $proLoop->have_posts() ) : $proLoop->the_post(); 
                     ?>

@@ -98,6 +98,27 @@
     }
 }
 
+@media only screen and ( min-width: 640px ) {
+
+    // SUCCES STORIES
+    .testimonials {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .testimonial-block {
+        margin: 0;
+        width: 48%;
+    }
+}
 
 @media only screen and ( min-width: 768px ) {
 
@@ -353,11 +374,18 @@
         .slide {
             height: auto;
             margin: 0 20px 0 0;
-            // width: 620px !important;
         }
 
         .slick-dots {
             bottom: -45px;
+        }
+    }
+
+    // ARCHIVES
+    .archive {
+
+        .intro-text {
+            margin: 0 0 2rem 0;
         }
     }
 
@@ -607,6 +635,14 @@
         }
     }
 
+    .site-branding {
+        width: 35%;
+    }
+
+    .motto-search {
+        width: 65%;
+    }
+
     .bottom-header {
 
         a {
@@ -668,6 +704,14 @@
         }
     }
     
+    // ARCHIVES
+    .archive {
+
+        .intro-text {
+            margin: 0 0 2.5rem 0;
+        }
+    }
+
     // FOOTER
     .site-footer {
 

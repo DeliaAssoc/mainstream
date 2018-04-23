@@ -354,6 +354,27 @@
 }
 
 // SUCCESS STORIES
+.testimonial-block {
+	background-color: $ltgray;
+	margin: 0 0 1rem 0;
+	padding: 20px;
+
+	&:last-of-type {
+		margin: 0;
+	}
+
+	.testimonial-text {
+		font-style: italic;
+		font-weight: 600;
+		margin: 0 0 10px 0;
+	}
+
+	.testimonial-client {
+		font-size: 14px;
+		text-align: right;
+	}
+}
+
 .success {
 
 	.intro-text {
@@ -388,6 +409,20 @@
 			top: 4px;
     		left: 0;
 		}
+	}
+}
+
+// ARCHIVES
+.archive {
+
+	.intro-text {
+		margin: 0 0 1rem 0;
+	}
+
+	.tab-block {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
 	}
 }
 
