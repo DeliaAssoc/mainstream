@@ -1371,6 +1371,10 @@ button#responsive-menu-button {
   display: flex;
 }
 
+.media-slider {
+  margin: 0 0 1em 0;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1780,6 +1784,26 @@ object {
 
   .archive .intro-text {
     margin: 0 0 2rem 0;
+  }
+
+  .body-content .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .body-content .text, .body-content .media-slider {
+    width: 48%;
+  }
+  .body-content .text.full {
+    width: 100%;
+  }
+
+  .media-slider {
+    margin: 0;
   }
 
   .left-footer {

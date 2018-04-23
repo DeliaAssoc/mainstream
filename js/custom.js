@@ -25,6 +25,9 @@ $( document ).ready( function() {
 	// PRODUCT PAGE SLIDER
 	$( '.product-slider' ).slick();
 
+	// LITERATURE PAGE SLIDER
+	$( '.media-slider' ).slick();
+
 	// SUCCESS SLIDER
 	$('.success-slider').slick({
 		infinite: false,

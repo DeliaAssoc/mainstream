@@ -389,6 +389,32 @@
         }
     }
 
+    // LITERATURE PAGE
+    .body-content {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .text, .media-slider {
+            width: 48%;
+        }
+
+        .text.full {
+            width: 100%;
+        }
+    }
+
+    .media-slider {
+        margin: 0;
+    }
+
     // FOOTER
     .left-footer {
         -webkit-box-align: center;
