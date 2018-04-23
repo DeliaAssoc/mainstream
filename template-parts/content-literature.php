@@ -46,7 +46,7 @@
             </div><!-- .body-content -->
         </section><!-- .main-content -->
         <?php if ( get_field( 'literature_media_section_title' ) || get_field( 'literature_media_items' ) ) : ?>
-            <section class="media-items">
+            <section class="media-items-list p60 ltgray-bg">
                 <div class="constrain">
                     <h2 class="page-title">
                         <?php the_field( 'literature_media_section_title' ); ?>
@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="media-item-text">
                                         <h4><?php the_sub_field( 'item_title' ); ?></h4>
-                                        <div><?php the_sub_field( 'item_text' ); ?></div>
+                                        <div class="text"><?php the_sub_field( 'item_text' ); ?></div>
                                         <?php $file = get_sub_field( 'item_media_file' ); ?>
                                         <a traget="_blank" href="<?php echo $file[ 'url' ]; ?>" class="chevron-left">Download</a>
                                     </div>

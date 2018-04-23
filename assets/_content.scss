@@ -431,6 +431,22 @@
 	margin: 0 0 1em 0;
 }
 
+.media-item {
+	background-color: $lightest;
+	margin: 0 0 1rem 0;
+	padding: 1rem;
+}
+
+.media-item-image,
+.media-item-text h4,
+.media-item-text .text {
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+
+.media-item-text h4 {
+	line-height: 1.5rem;
+}
 
 /*--------------------------------------------------------------
 ## Comments
