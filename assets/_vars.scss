@@ -35,6 +35,6 @@ $fa: 'FontAwesome', sans-serif;
 // ---------------------------------------------------
 
 
-$transition-fast: all 0.15s ease;
-$transition-medium: all 0.25s;
-$transition-slow: all 0.5s;
+$transition-fast: all 0.15s ease-in-out;
+$transition-medium: all 0.25s ease-in-out;
+$transition-slow: all 0.5s ease-in-out;

@@ -72,6 +72,10 @@
 
     .motto-search {
         padding: 5px 0 0 0;
+
+        form {
+            top: 60px;
+        }
     }
 
     .site-content {
@@ -571,6 +575,14 @@
     }
 
     // HEADER
+    .motto-search {
+
+        form {
+            right: 50px;
+            top: 5px;
+        }
+    }
+
     .bottom-header {
         padding: 10px 0;
     }
@@ -766,6 +778,11 @@
 
     .motto-search {
         width: 65%;
+
+        form {
+            right: 48px;
+            top: 8px;
+        }
     }
 
     .bottom-header {

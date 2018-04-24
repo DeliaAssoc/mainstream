@@ -57,8 +57,41 @@ button#responsive-menu-button {
 }
 
 .motto-search {
+    position: relative;
     text-align: right;
     width: 50%;
+
+    form {
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 50px;
+
+        input[type=search] {
+            padding: 5px 0;
+            transition: all 0.75s ease-in-out;
+            width: 0;
+
+            &.opened {
+                box-shadow: $light-shadow;
+                padding: 5px 10px;
+                transition: all 0.75s ease-in-out;
+                width: 300px;
+            }
+        }
+
+        input[type=submit] {
+            background-color: $accent;
+            border: 0;
+            color: white;
+            font-weight: 700;
+            height: 40px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-transform: uppercase;
+        }
+    }
 }
 
 .site-description {

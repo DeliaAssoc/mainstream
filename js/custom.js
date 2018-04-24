@@ -1,5 +1,17 @@
 $( document ).ready( function() {
 
+	// Open search form
+	$( 'a.search' ).on( 'click', function( e ){
+
+			e.preventDefault();
+			
+			if ( $('.search-field').hasClass( 'opened' ) ) {
+				$('.search-field').removeClass( 'opened' );
+			} else {
+				$('.search-field').addClass( 'opened' );
+			}
+	});
+
 	// Hide top bar on scroll
 	$( window ).scroll( function(){
 

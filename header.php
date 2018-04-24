@@ -51,8 +51,8 @@
 						if ( $msc_description || is_customize_preview() ) : ?>
 						<div class="site-description"><?php echo $msc_description; /* WPCS: xss ok. */ ?></div>
 					<?php endif; ?>
-					<a href="#" class="search"><i class="fas fa-search"></i></a>
-					<!-- <?php get_search_form(); ?> -->
+						<a href="#" class="search"><i class="fas fa-search"></i></a>
+					<?php get_search_form(); ?>
 				</div>
 			</div>
 		</div>
