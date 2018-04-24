@@ -41,6 +41,11 @@
             width: 48%
         }
     }
+
+    // CONTACT PAGE
+    .form-info {
+        padding: 0 0 40px 0;
+    }
 }
 
 @media only screen and ( min-width: 568px ) {
@@ -217,8 +222,10 @@
     }
 
     .slide-text-inner {
+        max-width: 85%;
         padding: 0 0 0 40px;
         position: absolute;
+        right: 0;
         top: 50%;
         transform: translateY( -50% );
 
@@ -442,6 +449,60 @@
         }
     }
 
+    // CONTACT PAGE
+    .form-cols-2 {
+        
+        br {
+            display: none;
+        }
+
+        .wpcf7-form-control-wrap {
+            display: inline-block;
+            width: 48.5%;
+
+            &:last-of-type {
+                float: right;
+            }
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="range"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    textarea {
+        margin: 0 0 20px 0;
+    }
+
+    aside.contact {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .gmap,
+    .contact-blocks {
+        width: 48%;
+    }
+
     // FOOTER
     .left-footer {
         -webkit-box-align: center;
@@ -625,7 +686,10 @@
         .project-details {
 
             &.flexxed {
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
             }
 
             .detail {
@@ -771,6 +835,44 @@
         .intro-text {
             margin: 0 0 2.5rem 0;
         }
+    }
+
+    // CONTACT PAGE
+    .form-info {
+        padding: 0 0 60px 0;
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    aside.contact {
+        width: 32%;
+
+        &.flexxed {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+        }
+    }
+
+    .form-area {
+        width: 63%;
+    }
+
+    .gmap,
+    .contact-blocks {
+        width: 100%;
     }
 
     // FOOTER

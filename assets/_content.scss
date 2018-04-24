@@ -448,6 +448,74 @@
 	line-height: 1.5rem;
 }
 
+// CONTACT PAGE
+.form-info {
+	padding: 0 0 30px 0;
+
+	.flexxed {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		    -ms-flex-direction: column-reverse;
+		        flex-direction: column-reverse;
+	}
+}
+
+.form-area {
+	margin: 0 0 1rem 0;
+
+	h3 {
+		font-size: 20px;
+	}
+}
+
+.gmap {
+	margin: 0 0 1rem 0;
+}
+
+aside.contact {
+
+	&.flexxed {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+
+	h4 {
+		margin: 0 0 .25rem 0;
+	}
+
+	.contact-block {
+		padding: 0 0 0 55px;
+		position: relative;
+		margin: 0 0 1rem 0;
+
+		&:before {
+			color: $accent;
+			content: '';
+			font-family: $fa;
+			font-size: 50px;
+			left: 0;
+			line-height: 1em;
+			position: absolute;
+			top: 0;
+		}
+
+		&.address:before {
+			content: '\f08d';
+		}
+
+		&.phones:before {
+			content: '\f10b';
+		}
+
+		&.email:before {
+			content: '\f0e0';
+			font-size: 40px;
+		}
+	}
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

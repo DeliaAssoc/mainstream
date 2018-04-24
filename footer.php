@@ -38,7 +38,7 @@
 					<?php endif; ?>
 
 					<div class="email text">
-						Email: <a href="mailto:<?php echo get_theme_mod( 'theme_email' ); ?>"><?php echo get_theme_mod( 'theme_company_email' ); ?></a>
+						Email: <a href="mailto:<?php echo get_theme_mod( 'theme_company_email' ); ?>"><?php echo get_theme_mod( 'theme_company_email' ); ?></a>
 					</div>
 				</div>
 			</div><!-- .footer-block .left-footer -->
@@ -46,12 +46,16 @@
 				<div class="copyright text">
 					&copy; <?php echo date( 'Y' ); ?> <?php echo bloginfo( 'name' ); ?>
 				</div>
-				<div class="privacy text">
-					<a href="<?php echo get_theme_mod( 'theme_privacy_policy' ); ?>">Privacy Statement</a>
-				</div>
-				<div class="sitemap text">
-					<a href="<?php echo get_theme_mod( 'theme_sitemap' ); ?>">Site Map</a>
-				</div>
+				<?php if ( get_theme_mod( 'theme_privacy_policy' ) ) : ?>
+					<div class="privacy text">
+						<a href="<?php echo get_theme_mod( 'theme_privacy_policy' ); ?>">Privacy Statement</a>
+					</div>
+				<?php endif; ?>
+				<?php if ( get_theme_mod( 'theme_sitemap' ) ) : ?>
+					<div class="sitemap text">
+						<a href="<?php echo get_theme_mod( 'theme_sitemap' ); ?>">Site Map</a>
+					</div>
+				<?php endif; ?>
 			</div><!-- .footer-block .right-footer -->
 		</div>
 	

@@ -799,9 +799,30 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+  background-color: #dde1e3;
   color: #666;
-  border: 1px solid #ccc;
-  padding: 3px;
+  border: 0;
+  margin: 0 0 10px 0;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+  height: 40px;
 }
 
 input[type="text"]:focus,
@@ -1392,6 +1413,62 @@ button#responsive-menu-button {
   line-height: 1.5rem;
 }
 
+.form-info {
+  padding: 0 0 30px 0;
+}
+.form-info .flexxed {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.form-area {
+  margin: 0 0 1rem 0;
+}
+.form-area h3 {
+  font-size: 20px;
+}
+
+.gmap {
+  margin: 0 0 1rem 0;
+}
+
+aside.contact.flexxed {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+aside.contact h4 {
+  margin: 0 0 .25rem 0;
+}
+aside.contact .contact-block {
+  padding: 0 0 0 55px;
+  position: relative;
+  margin: 0 0 1rem 0;
+}
+aside.contact .contact-block:before {
+  color: #00b2e9;
+  content: '';
+  font-family: "FontAwesome", sans-serif;
+  font-size: 50px;
+  left: 0;
+  line-height: 1em;
+  position: absolute;
+  top: 0;
+}
+aside.contact .contact-block.address:before {
+  content: '\f08d';
+}
+aside.contact .contact-block.phones:before {
+  content: '\f10b';
+}
+aside.contact .contact-block.email:before {
+  content: '\f0e0';
+  font-size: 40px;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1523,6 +1600,10 @@ object {
   }
   .media-items-list .items-2, .media-items-list .items-3, .media-items-list .items-4, .media-items-list .items-5, .media-items-list .items-6, .media-items-list .items-7, .media-items-list .items-8, .media-items-list .items-9, .media-items-list .items-10 {
     width: 48%;
+  }
+
+  .form-info {
+    padding: 0 0 40px 0;
   }
 }
 @media only screen and (min-width: 568px) {
@@ -1671,8 +1752,10 @@ object {
   }
 
   .slide-text-inner {
+    max-width: 85%;
     padding: 0 0 0 40px;
     position: absolute;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -1842,6 +1925,51 @@ object {
     width: 32%;
   }
 
+  .form-cols-2 br {
+    display: none;
+  }
+  .form-cols-2 .wpcf7-form-control-wrap {
+    display: inline-block;
+    width: 48.5%;
+  }
+  .form-cols-2 .wpcf7-form-control-wrap:last-of-type {
+    float: right;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  textarea {
+    margin: 0 0 20px 0;
+  }
+
+  aside.contact.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .gmap,
+  .contact-blocks {
+    width: 48%;
+  }
+
   .left-footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1976,6 +2104,9 @@ object {
     width: 28%;
   }
   .success .project-details.flexxed {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .success .project-details .detail {
@@ -2075,6 +2206,41 @@ object {
 
   .archive .intro-text {
     margin: 0 0 2.5rem 0;
+  }
+
+  .form-info {
+    padding: 0 0 60px 0;
+  }
+  .form-info .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  aside.contact {
+    width: 32%;
+  }
+  aside.contact.flexxed {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .form-area {
+    width: 63%;
+  }
+
+  .gmap,
+  .contact-blocks {
+    width: 100%;
   }
 
   .site-footer .flexxed {

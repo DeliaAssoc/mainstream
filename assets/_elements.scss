@@ -130,9 +130,30 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+	background-color: $ltgray;
 	color: #666;
-	border: 1px solid #ccc;
-	padding: 3px;
+	border: 0;
+	margin: 0 0 10px 0;
+	padding: 5px 10px;
+	width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+	height: 40px;
 }
 
 input[type="text"]:focus,

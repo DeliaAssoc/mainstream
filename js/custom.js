@@ -22,6 +22,9 @@ $( document ).ready( function() {
 		autoplaySpeed: 5000
 	});
 
+	// DEFAULT PAGE SLIDER
+	$( '.default-slider' ).slick();
+
 	// PRODUCT PAGE SLIDER
 	$( '.product-slider' ).slick();
 
