@@ -65,7 +65,7 @@
                                         <h4><?php the_sub_field( 'item_title' ); ?></h4>
                                         <div class="text"><?php the_sub_field( 'item_text' ); ?></div>
                                         <?php $file = get_sub_field( 'item_media_file' ); ?>
-                                        <a traget="_blank" href="<?php echo $file[ 'url' ]; ?>" class="chevron-left">Download</a>
+                                        <a target="_blank" href="<?php echo $file[ 'url' ]; ?>" class="chevron-left">Download</a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>
@@ -83,7 +83,7 @@
                     <?php the_field( 'cta_module_text', 'option' ); ?> <a href="tel:<?php the_field( 'cta_module_phone_number', 'option' ); ?>"><?php the_field( 'cta_module_phone_number', 'option' ); ?></a>
                 </div>
                 <div class="link">
-                    <a class="chevron-right white" href="<?php the_field( 'cta_module_link_text', 'option' ); ?>"><?php the_field( 'cta_module_link_text', 'option' ); ?></a>
+                    <a class="chevron-right white" href="<?php the_field( 'cta_module_link_url', 'option' ); ?>"><?php the_field( 'cta_module_link_text', 'option' ); ?></a>
                 </div>
             </div>
         </section>

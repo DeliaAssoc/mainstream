@@ -516,6 +516,36 @@ aside.contact {
 	}
 }
 
+// 404 Page
+.page-content {
+	text-align: center;
+}
+
+.link-404 {
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+
+.error-404 {
+
+	form {
+        overflow: hidden;
+        position: relative;
+
+        input[type=submit] {
+            background-color: $accent;
+            border: 0;
+            color: white;
+            font-weight: 700;
+            height: 40px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-transform: uppercase;
+        }
+    }
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

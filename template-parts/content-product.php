@@ -123,7 +123,7 @@
                     <?php the_field( 'cta_module_text', 'option' ); ?> <a href="tel:<?php the_field( 'cta_module_phone_number', 'option' ); ?>"><?php the_field( 'cta_module_phone_number', 'option' ); ?></a>
                 </div>
                 <div class="link">
-                    <a class="chevron-right white" href="<?php the_field( 'cta_module_link_text', 'option' ); ?>"><?php the_field( 'cta_module_link_text', 'option' ); ?></a>
+                    <a class="chevron-right white" href="<?php the_field( 'cta_module_link_url', 'option' ); ?>"><?php the_field( 'cta_module_link_text', 'option' ); ?></a>
                 </div>
             </div>
         </section>

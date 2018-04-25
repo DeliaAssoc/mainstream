@@ -1498,6 +1498,31 @@ aside.contact .contact-block.email:before {
   font-size: 40px;
 }
 
+.page-content {
+  text-align: center;
+}
+
+.link-404 {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.error-404 form {
+  overflow: hidden;
+  position: relative;
+}
+.error-404 form input[type=submit] {
+  background-color: #00b2e9;
+  border: 0;
+  color: white;
+  font-weight: 700;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-transform: uppercase;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1712,6 +1737,12 @@ object {
   .testimonial-block {
     margin: 0;
     width: 48%;
+  }
+
+  .link-404 {
+    display: inline-block;
+    margin: 0 0 20px 0;
+    padding: 0 20px;
   }
 }
 @media only screen and (min-width: 768px) {
