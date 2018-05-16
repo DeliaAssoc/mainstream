@@ -34,6 +34,13 @@
 		elseif ( is_search() ) :
 			?>
 
+				<div class="page-content">
+					CHECK OUT THESE LINKS:</br>
+					<h3 class="link-404"><a href="/"><span class="accent-text">Home</span> Page</a></h3><h3 	class="link-404"><a href="/contact/">Contact <span class="accent-text">Us</span></a></h3>
+					<?php
+					?>
+				</div><!-- .page-content -->
+
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'msc' ); ?></p>
 			<?php
 			get_search_form();

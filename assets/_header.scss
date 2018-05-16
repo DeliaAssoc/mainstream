@@ -49,7 +49,7 @@ button#responsive-menu-button {
 }
 
 .site-title {
-    width: 125px;
+    width: 185px;
 
     img {
         display: block;
@@ -95,6 +95,7 @@ button#responsive-menu-button {
 }
 
 .site-description {
+    color: #000 !important;
     display: none;
     font-family: $mont;
     font-weight: 900;

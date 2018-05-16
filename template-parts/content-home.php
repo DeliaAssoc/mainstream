@@ -61,7 +61,9 @@
                                 $imgAlt = get_post_meta($imgID,'_wp_attachment_image_alt', true); ?>
                             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo $imgAlt; ?>">
                             <span class="overlay">
-                                <?php the_title(); ?>
+								<!-- Remove HTML From Title -->
+								<?php $title = get_the_title(); ?>
+                               <?php echo strip_tags( $title ); ?>
                             </span>
                         </a>  
 
@@ -88,7 +90,9 @@
                                 $imgAlt = get_post_meta($imgID,'_wp_attachment_image_alt', true); ?>
                             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo $imgAlt; ?>">
                             <span class="overlay">
-                                <?php the_title(); ?>
+								<!-- Remove HTML From Title -->
+								<?php $title = get_the_title(); ?>
+                               <?php echo strip_tags( $title ); ?>
                             </span>
                         </a>  
 

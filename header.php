@@ -21,7 +21,8 @@
 	<script  async='async' src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
 	<style>.slider, .product-slider {/* stops slides from stacking breifly on page load */ display: none;}</style>
 	<?php wp_head(); ?>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -72,3 +73,12 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+		<?php
+		if( function_exists('bcn_display') && !is_page( 'home' ) ) : ?>
+			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+				<div class="constrain">
+					<?php bcn_display(); ?>
+				</div>
+			</div>
+		<?php endif; ?>

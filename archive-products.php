@@ -46,7 +46,9 @@ get_header();
 									$imgAlt = get_post_meta($imgID,'_wp_attachment_image_alt', true); ?>
 								<img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo $imgAlt; ?>">
 								<span class="overlay">
-									<?php the_title(); ?>
+									<!-- Remove HTML From Title -->
+									<?php $title = get_the_title(); ?>
+									<?php echo strip_tags( $title ); ?>
 								</span>
 							</a>  
 
@@ -58,6 +60,25 @@ get_header();
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+    <?php if ( get_field( 'cta_module_text', 'option' ) ) : ?>
+        <section class="cta-contact-module p60 dkgray-bg">
+            <div class="constrain lg flexxed">
+                <div class="text-block">
+                    <?php the_field( 'cta_module_text', 'option' ); ?> <a href="tel:<?php the_field( 'cta_module_phone_number', 'option' ); ?>"><?php the_field( 'cta_module_phone_number', 'option' ); ?></a>
+                </div>
+                <div class="link">
+                    <a class="chevron-right white" href="<?php the_field( 'cta_module_link_url', 'option' ); ?>"><?php the_field( 'cta_module_link_text', 'option' ); ?></a>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
 
+    <?php if ( get_field( 'module_text', 'option' ) ) : ?>
+        <section class="block-module cta-block accent-bg p60">
+            <div class="constrain">
+                <?php the_field( 'module_text', 'option' ); ?>
+            </div>
+        </section><!-- .cta-module -->
+    <?php endif; ?>
 <?php
 get_footer();
