@@ -5,16 +5,26 @@
         padding: 40px 0;
     }
 
-    .slide-text-inner {
-        padding: 20px 40px;
-    }
-
     // TYPOGRAPHY
     h1.page-title {
         font-size: 42px;
     }
 
+    // NAVIGATION
+    .shift-nav {
+        left: -400px;
+        width: 400px;
+    }
+
+    .site.open {
+        margin-left: 400px;
+    }
+
     // HOMEPAGE
+    .slide-text-inner {
+        padding: 20px 40px;
+    }
+
     .tabbed-links {
 
         &.p60 {
@@ -67,7 +77,7 @@
     }
 
     .site-title {
-        width: 155px;
+        width: 200px;
     }
 
     .motto-search {
@@ -200,7 +210,7 @@
     }
 
     .site-title {
-        width: 200px;
+        width: 250px;
     }
 
     .motto-search {
@@ -615,6 +625,10 @@
         margin: 165px 0 0 0;
     }
 
+    .site-title {
+        width: 300px;
+    }
+
     // HOMEPAGE
     .slide-text-inner p {
         font-size: 34px;
@@ -758,7 +772,32 @@
         }
     }
 
+    // BREADCRUMBS
+    .breadcrumbs {
+        color: $dkgray;
+        display: block;
+        font-weight: 500;
+        margin: 30px 0 0 0;
+
+        .accent-text {
+            color: $dkgray;
+        }
+
+        .constrain {
+            border-bottom: 1px solid lighten( $dkgray, 30% );
+            padding: 0 0 10px 0;
+        }
+
+        a {
+            color: $dkgray;
+        }
+    }
+
     // HEADER
+    .open-nav {
+        display: none;
+    }
+
     .site-description {
         display: inline-block;
         font-size: 24px;
@@ -800,6 +839,10 @@
     }
 
     // HOMEPAGE
+    .slide-text-inner p {
+        line-height: 1.15em;
+    }
+
     .tabbed-links {
 
         &.p60 {
@@ -977,6 +1020,10 @@
         a {
             padding: 0 35px;
         }
+    }
+
+    .site-title {
+        width: 325px;
     }
 
     // HOMEPAGE

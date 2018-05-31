@@ -124,6 +124,9 @@ function msc_scripts() {
 	// Add slick.css
 	wp_enqueue_style( 'msc-slick-style', get_template_directory_uri() . '/css/slick.css' );
 
+	// Add font-awesome.css
+	wp_enqueue_style( 'msc-fontawesome-style', get_template_directory_uri() . '/css/fontawesome-all.min.css' );
+
 	// Add slick-theme.css
 	wp_enqueue_style( 'msc-slicktheme-style', get_template_directory_uri() . '/css/slick-theme.css' );
 	
@@ -205,3 +208,14 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 }
+
+// Register left side menu
+function shift_menu() {
+
+	$locations = array(
+		'shift_menu' => __( 'Left side shift menu', 'text_domain' ),
+	);
+	register_nav_menus( $locations );
+
+}
+add_action( 'init', 'shift_menu' );

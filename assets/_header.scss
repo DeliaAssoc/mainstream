@@ -16,7 +16,7 @@ button#responsive-menu-button {
 .aux-header,
 .mid-header,
 .bottom-header {
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 .aux-header {
@@ -30,6 +30,9 @@ button#responsive-menu-button {
 .mid-header {
 
     .flexxed {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
@@ -45,11 +48,11 @@ button#responsive-menu-button {
 }
 
 .site-branding {
-    width: 50%;
+    width: 70%;
 }
 
 .site-title {
-    width: 125px;
+    width: 185px;
 
     img {
         display: block;
@@ -59,7 +62,7 @@ button#responsive-menu-button {
 .motto-search {
     position: relative;
     text-align: right;
-    width: 50%;
+    width: 10%;
 
     form {
         overflow: hidden;
@@ -95,6 +98,7 @@ button#responsive-menu-button {
 }
 
 .site-description {
+    color: #000 !important;
     display: none;
     font-family: $mont;
     font-weight: 900;

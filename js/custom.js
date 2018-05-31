@@ -48,7 +48,7 @@ $( document ).ready( function() {
 		infinite: false,
 		slidesToShow: 2,
 		slidesToScroll: 1,
-		dots: true,
+		dots: false,
 		responsive: [
 			{
 				breakpoint: 641,
@@ -116,4 +116,72 @@ $( document ).ready( function() {
 			$btt.removeClass( 'visible' );
 		}
 	});
+
+	// Toggle ShiftNav Menu
+	// $body = $( 'body' ),
+	// $menuItem = $( '.open-nav' );
+	// $shiftMenu = $( '.shiftnav' );
+
+	// $menuItem.on( 'click', function( e ){
+
+	// 	e.preventDefault();
+	// 	// $body.toggleClass( 'menu-open' );
+	// 	$body.toggleClass( 'shiftnav-open shiftnav-open-left' );
+	// 	$shiftMenu.toggleClass( 'shiftnav-open shiftnav-open-target' );
+
+	// });
+
+	// Shift Navigation
+	$site = $( '.site' ),
+	$mButton = $( '#mobile-btn' ),
+	$menuItem = $( '.open-nav' ),
+	$shMenu = $( '.shift-nav' ),
+	$subMenu = $( '.sub-menu' ),
+	$mClose = $( '.menu-close' ),
+	$hChild = $( '.menu-item-has-children' );
+
+	// ADD MENU ICON TO ITEMS WITH SUBITEMS
+	$hChild.append( '<div class="sub-icon"><i class="fas fa-bars"></i></div>' );
+
+	// ADD BACK BUTTON TO SUBMENU
+	$subMenu.prepend( '<a href="#" class="go-back"><i class="fas fa-chevron-circle-left"></i> Go Back</a>' );
+
+	// OPEN SHIFT MENU AND SHIFT CONENT
+	$mButton.on( 'click', function( e ){
+
+		e.preventDefault();
+
+		if ( !$site.hasClass( 'open' ) ) {
+			$site.addClass( 'open' );
+		}
+
+		if ( !$shMenu.hasClass( 'open' ) ) {
+			$shMenu.addClass( 'open' );
+		} else {
+			$shMenu.removeClass( 'open' );
+		}
+	});
+
+	// CLOSE MENU AND SHIFT CONTENT BACK
+	$mClose.on( 'click', function( e ){
+
+		e.preventDefault();
+
+		if ( $site.hasClass( 'open' ) ) {
+			$site.removeClass( 'open' );
+		}
+
+		if ( !$shMenu.hasClass( 'open' ) ) {
+			$shMenu.addClass( 'open' );
+		} else {
+			$shMenu.removeClass( 'open' );
+		}
+	});
+
+	// $( '.menu-item-has-children' ).find( '.fa-bars' ).on( 'click', function( e ){
+	// 	e.preventDefault();
+	// 	console.log('clicked')
+	// });
+
 });
+

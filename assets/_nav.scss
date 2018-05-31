@@ -28,6 +28,102 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.open-nav {
+    text-align: center;
+    width: 15%;
+
+    .fa-bars {
+		background-color: $accent;
+		box-shadow: $light-shadow;
+        color: $lightest;
+        font-size: 24px;
+        padding: 9px;
+    }
+}
+
+.menu-shift-menu-container {
+	margin: 40px 0 0 0;
+}
+
+.shift-nav {
+	background-color: $darkest;
+	height: 100%;
+	left: -100vw;
+	padding: 20px;
+	position: fixed;
+	transition: all 0.4s;
+	top: 0;
+	width: 100vw;
+	z-index: 9999;
+
+	&.open {
+		left: 0;
+		transition: all 0.4s;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		margin: 0 0 5px 0;
+
+		a {		
+			color: $lightest;
+			display: inline-block;
+			line-height: 40px;
+		}
+
+		&.menu-item-has-children {
+		}
+
+		.sub-icon {
+			border-left: 1px solid rgba( $lightest, .6 );
+			color: rgba( $lightest, .6 );
+			float: right;
+			font-size: 20px;
+			padding: 0 0 0 15px;
+		}
+	}
+
+	.sub-menu {
+		background-color: $darkest;
+		height: 100%;
+		left: -100vw;
+		padding: 20px;
+		position: absolute;
+		top: 0;
+		transition: all 0.4s;
+		width: 100vw;
+
+		&.open {
+			left: 0;
+			transition: all 0.4s;
+		}
+	}
+
+	a.go-back {
+		color: rgba( $lightest, .6 );
+
+		.fas {
+			margin: 0 5px 0 0;
+		}
+	}
+}
+
+.menu-close {
+	color: rgba( $lightest, .6 ) !important;
+	font-size: 25px;
+	position: absolute;
+	right: 20px;
+}
+
+.bottom-header {
+	display: none;
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
