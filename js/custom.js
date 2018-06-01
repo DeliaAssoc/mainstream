@@ -132,24 +132,38 @@ $( document ).ready( function() {
 	// });
 
 	// Shift Navigation
-	$site = $( '.site' ),
+	$hChild = $( '.menu-item-has-children' ),
+	$mNav = $( '.main-navigation' ),
 	$mButton = $( '#mobile-btn' ),
-	$menuItem = $( '.open-nav' ),
-	$shMenu = $( '.shift-nav' ),
-	$subMenu = $( '.sub-menu' ),
 	$mClose = $( '.menu-close' ),
-	$hChild = $( '.menu-item-has-children' );
+	$menuItem = $( '.open-nav' ),
+	$sItem = $( '.shift' ),
+	$shMenu = $( '.shift-nav' ),
+	$site = $( '.site-wrapper' ),
+	$subMenu = $( '.sub-menu' ),
+	$sHeader = $( '.site-header' ),
+	$pMenu = $shMenu.find( 'a:contains( "products" )' ),
+	$sMenu = $shMenu.find( 'a:contains( "success" )' );
 
 	// ADD MENU ICON TO ITEMS WITH SUBITEMS
-	$hChild.append( '<div class="sub-icon"><i class="fas fa-bars"></i></div>' );
+	$hChild.append( '<a class="sub-icon"><i class="fas fa-bars"></i></a>' );
 
 	// ADD BACK BUTTON TO SUBMENU
 	$subMenu.prepend( '<a href="#" class="go-back"><i class="fas fa-chevron-circle-left"></i> Go Back</a>' );
 
-	// OPEN SHIFT MENU AND SHIFT CONENT
+	// PREPEND TITLE TO EACH SUBMENU
+	$hChild.each( function(){
+
+		$title = $( this ).find( 'a:first' ).text();
+		$( this ).find( '.sub-menu' ).prepend( '<div class="sub-title">' + $title + '</div>' );
+	});
+
+	// OPEN SHIFT MENU AND SHIFT CONENT MOBILE
 	$mButton.on( 'click', function( e ){
 
 		e.preventDefault();
+
+		$subMenu.removeClass( 'open' );
 
 		if ( !$site.hasClass( 'open' ) ) {
 			$site.addClass( 'open' );
@@ -157,9 +171,12 @@ $( document ).ready( function() {
 
 		if ( !$shMenu.hasClass( 'open' ) ) {
 			$shMenu.addClass( 'open' );
-		} else {
-			$shMenu.removeClass( 'open' );
 		}
+
+		if ( !$sHeader.hasClass( 'open' ) ) {
+			$sHeader.addClass( 'open' );
+		}
+		
 	});
 
 	// CLOSE MENU AND SHIFT CONTENT BACK
@@ -176,12 +193,68 @@ $( document ).ready( function() {
 		} else {
 			$shMenu.removeClass( 'open' );
 		}
+
+		if ( $sHeader.hasClass( 'open' ) ) {
+			$sHeader.removeClass( 'open' );
+		}
 	});
 
-	// $( '.menu-item-has-children' ).find( '.fa-bars' ).on( 'click', function( e ){
-	// 	e.preventDefault();
-	// 	console.log('clicked')
-	// });
+	// OPEN SUBMENU
+	$hChild.find( '.sub-icon' ).on( 'click', function( e ){
 
+		e.preventDefault();
+
+		if ( !$( this ).siblings( '.sub-menu' ).hasClass( 'open' ) ) {
+			$( this ).siblings( '.sub-menu' ).addClass( 'open' );
+		}
+
+	});
+
+	// CLOSE SUBMENU
+	$( '.go-back' ).on( 'click', function( e ){
+
+		e.preventDefault();
+
+		if ( $( this ).closest( '.sub-menu' ).hasClass( 'open' ) ) {
+
+			$( this ).closest( '.sub-menu' ).removeClass( 'open' )
+		}
+	});
+
+	// OPEN SUBMENUS ON DESKTOP
+	$sItem.on( 'click', function( e ){
+
+		e.preventDefault();
+
+		if ( !$shMenu.hasClass( 'open' ) ) {
+
+			$shMenu.addClass( 'open' );
+			$site.addClass( 'open' );
+			$sHeader.addClass( 'open' );
+			$subMenu.removeClass( 'open' );
+		} 
+
+		if ( $( this ).hasClass( 'products' ) ) {
+			
+			// If products item
+			$shMenu.find( '.sub-menu' ).removeClass( 'open' );
+
+			if ( !$( '#menu-item-397' ).find( '.sub-menu' ).hasClass( 'open' ) ) {
+
+				$( '#menu-item-397' ).find( '.sub-menu' ).addClass( 'open' );
+			}
+
+		} else if ( $( this ).hasClass( 'success' ) ) {
+
+			// If success item
+			$shMenu.find( '.sub-menu' ).removeClass( 'open' );
+
+			if ( !$( '#menu-item-428' ).find( '.sub-menu' ).hasClass( 'open' ) ) {
+
+				$( '#menu-item-428' ).find( '.sub-menu' ).addClass( 'open' );
+			}
+		}
+
+	});
 });
 

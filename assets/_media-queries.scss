@@ -10,13 +10,34 @@
         font-size: 42px;
     }
 
+    // HEADER
+    .site-header {
+
+        &.open {
+            left: 400px;
+        }
+    }
+
+    .site-branding {
+        width: 80%;
+    }
+
+    .open-nav {
+        width: 10%;
+    }
+
     // NAVIGATION
     .shift-nav {
         left: -400px;
         width: 400px;
+
+        .sub-menu {
+            left: -400px;
+            width: 400px;
+        }
     }
 
-    .site.open {
+    .site-wrapper.open {
         margin-left: 400px;
     }
 
@@ -139,6 +160,19 @@
 
 @media only screen and ( min-width: 640px ) {
 
+    // HEADER
+    .site-branding {
+        width: 85%;
+    }
+
+    .open-nav {
+        width: 10%;
+    }
+
+    .motto-search {
+        width: 5%;
+    }
+
     // SUCCES STORIES
     .testimonials {
 
@@ -194,7 +228,7 @@
 
     .aux-header {
         display: block;
-        height: 28px;
+        height: 35px;
         overflow: hidden;
         transition: $transition-medium;
 
@@ -592,6 +626,14 @@
     }
 
     // HEADER
+    .open-nav {
+        display: none;
+    }
+
+    a.go-back {
+        display: none !important;
+    }
+
     .motto-search {
 
         form {
@@ -601,6 +643,7 @@
     }
 
     .bottom-header {
+        display: block;
         padding: 10px 0;
     }
 
@@ -631,7 +674,7 @@
 
     // HOMEPAGE
     .slide-text-inner p {
-        font-size: 34px;
+        font-size: 30px;
     }
 
     .what-we-do {
@@ -794,8 +837,11 @@
     }
 
     // HEADER
-    .open-nav {
-        display: none;
+    .shift-nav {
+
+        .sub-menu {
+            overflow: hidden;
+        }
     }
 
     .site-description {
@@ -840,6 +886,7 @@
 
     // HOMEPAGE
     .slide-text-inner p {
+        font-size: 34px;
         line-height: 1.15em;
     }
 
@@ -1028,7 +1075,7 @@
 
     // HOMEPAGE
     .slide-text-inner p {
-        font-size: 39px;
+        font-size: 37px;
     }
 
     // PRODUCT PAGE

@@ -449,6 +449,13 @@ template {
   color: #fff;
 }
 
+.sub-title {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .chevron-left,
 a.chevron-left {
   font-weight: 700;
@@ -905,14 +912,14 @@ a:hover, a:active {
   left: -100vw;
   padding: 20px;
   position: fixed;
-  transition: all 0.4s;
+  transition: all 0.5s ease-in-out;
   top: 0;
   width: 100vw;
   z-index: 9999;
 }
 .shift-nav.open {
   left: 0;
-  transition: all 0.4s;
+  transition: all 0.5s ease-in-out;
 }
 .shift-nav ul {
   list-style: none;
@@ -920,7 +927,7 @@ a:hover, a:active {
   padding: 0;
 }
 .shift-nav li {
-  margin: 0 0 5px 0;
+  margin: 0 0 20px 0;
 }
 .shift-nav li a {
   color: #FFFFFF;
@@ -938,15 +945,14 @@ a:hover, a:active {
   background-color: #1a1a1a;
   height: 100%;
   left: -100vw;
+  overflow-y: scroll;
   padding: 20px;
   position: absolute;
   top: 0;
-  transition: all 0.4s;
   width: 100vw;
 }
 .shift-nav .sub-menu.open {
   left: 0;
-  transition: all 0.4s;
 }
 .shift-nav a.go-back {
   color: rgba(255, 255, 255, 0.6);
@@ -960,6 +966,7 @@ a:hover, a:active {
   font-size: 25px;
   position: absolute;
   right: 20px;
+  z-index: 9999;
 }
 
 .bottom-header {
@@ -1063,10 +1070,16 @@ button#responsive-menu-button {
 .site-header {
   background-color: #FFFFFF;
   box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.07);
+  left: 0;
   position: fixed;
   top: 0;
+  transition: all 0.5s ease-in-out;
   width: 100%;
   z-index: 99;
+}
+.site-header.open {
+  left: 100vw;
+  transition: all 0.5s ease-in-out;
 }
 
 .aux-header,
@@ -1167,16 +1180,13 @@ html, body {
   overflow-x: hidden;
 }
 
-body {
-  background-color: #1a1a1a;
+.site-wrapper {
+  transition: all 0.5s ease-in-out;
+  width: 100%;
 }
-
-.site {
-  transition: all 0.4s;
-}
-.site.open {
+.site-wrapper.open {
   margin-left: 100vw;
-  transition: all 0.4s;
+  transition: all 0.5s ease-in-out;
 }
 
 .site-content {
@@ -1742,12 +1752,28 @@ object {
     font-size: 42px;
   }
 
+  .site-header.open {
+    left: 400px;
+  }
+
+  .site-branding {
+    width: 80%;
+  }
+
+  .open-nav {
+    width: 10%;
+  }
+
   .shift-nav {
     left: -400px;
     width: 400px;
   }
+  .shift-nav .sub-menu {
+    left: -400px;
+    width: 400px;
+  }
 
-  .site.open {
+  .site-wrapper.open {
     margin-left: 400px;
   }
 
@@ -1842,6 +1868,18 @@ object {
   }
 }
 @media only screen and (min-width: 640px) {
+  .site-branding {
+    width: 85%;
+  }
+
+  .open-nav {
+    width: 10%;
+  }
+
+  .motto-search {
+    width: 5%;
+  }
+
   .testimonials .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1887,7 +1925,7 @@ object {
 
   .aux-header {
     display: block;
-    height: 28px;
+    height: 35px;
     overflow: hidden;
     transition: all 0.25s ease-in-out;
   }
@@ -2203,12 +2241,21 @@ object {
     width: 25%;
   }
 
+  .open-nav {
+    display: none;
+  }
+
+  a.go-back {
+    display: none !important;
+  }
+
   .motto-search form {
     right: 50px;
     top: 5px;
   }
 
   .bottom-header {
+    display: block;
     padding: 10px 0;
   }
 
@@ -2236,7 +2283,7 @@ object {
   }
 
   .slide-text-inner p {
-    font-size: 34px;
+    font-size: 30px;
   }
 
   .what-we-do .intro {
@@ -2349,8 +2396,8 @@ object {
     color: #555555;
   }
 
-  .open-nav {
-    display: none;
+  .shift-nav .sub-menu {
+    overflow: hidden;
   }
 
   .site-description {
@@ -2389,6 +2436,7 @@ object {
   }
 
   .slide-text-inner p {
+    font-size: 34px;
     line-height: 1.15em;
   }
 
@@ -2533,7 +2581,7 @@ object {
   }
 
   .slide-text-inner p {
-    font-size: 39px;
+    font-size: 37px;
   }
 
   .comp-opt-types .flexxed {

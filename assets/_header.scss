@@ -7,10 +7,17 @@ button#responsive-menu-button {
 .site-header {
     background-color: $lightest;
     box-shadow: $light-shadow;
+    left: 0;
     position: fixed;
     top: 0;
+    transition: $transition-slow;
     width: 100%;
     z-index: 99;
+
+    &.open {
+        left: 100vw;
+        transition: $transition-slow;
+    }
 }
 
 .aux-header,
