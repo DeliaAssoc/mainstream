@@ -9,6 +9,7 @@ button#responsive-menu-button {
     box-shadow: $light-shadow;
     position: fixed;
     top: 0;
+    transition: $transition-medium;
     width: 100%;
     z-index: 99;
 }

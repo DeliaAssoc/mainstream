@@ -81,13 +81,15 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div class="site-wrapper">
 
-		<?php
-		if( function_exists('bcn_display') && !is_page( 'home' ) ) : ?>
-			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-				<div class="constrain">
-					<?php bcn_display(); ?>
+		<div id="content" class="site-content">
+
+			<?php
+			if( function_exists('bcn_display') && !is_page( 'home' ) ) : ?>
+				<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+					<div class="constrain">
+						<?php bcn_display(); ?>
+					</div>
 				</div>
-			</div>
-		<?php endif; ?>
+			<?php endif; ?>

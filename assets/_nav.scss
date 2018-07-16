@@ -51,14 +51,14 @@ a:hover, a:active {
 	left: -100vw;
 	padding: 20px;
 	position: fixed;
-	transition: all 0.4s;
+	transition: $transition-slow;
 	top: 0;
 	width: 100vw;
 	z-index: 9999;
 
 	&.open {
 		left: 0;
-		transition: all 0.4s;
+		transition: $transition-slow;
 	}
 
 	ul {
@@ -68,7 +68,7 @@ a:hover, a:active {
 	}
 
 	li {
-		margin: 0 0 5px 0;
+		margin: 0 0 20px 0;
 
 		a {		
 			color: $lightest;
@@ -92,15 +92,14 @@ a:hover, a:active {
 		background-color: $darkest;
 		height: 100%;
 		left: -100vw;
+		overflow-y: scroll;
 		padding: 20px;
 		position: absolute;
 		top: 0;
-		transition: all 0.4s;
 		width: 100vw;
 
 		&.open {
 			left: 0;
-			transition: all 0.4s;
 		}
 	}
 
@@ -118,6 +117,7 @@ a:hover, a:active {
 	font-size: 25px;
 	position: absolute;
 	right: 20px;
+	z-index: 9999;
 }
 
 .bottom-header {
